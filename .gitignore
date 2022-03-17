@@ -21,8 +21,9 @@
 /node_modules/
 
 
-# Avoid accidental useless text file upload
-################################################
-## Please do not remove line 29 - thanks! 🙂 ##
-################################################
-*.txt
+# I don't want to add .json files to my repository
+#######################################################
+## Please do not remove line 28 and 29 - thanks! 🙂 ##
+#######################################################
+package.json
+package-lock.json

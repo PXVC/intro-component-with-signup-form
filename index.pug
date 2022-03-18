@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel='stylesheet')
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    link(rel='stylesheet' href='styles/css/style.css')
+    title Frontend Mentor | Intro component
+  body
+    .container
+      header
+        .content
+          h1 Learn to code by watching others
+          p
+            | See how experienced developers solve problems in real-time. Watching
+            | scripted tutorials is great, but understanding how developers think is
+            | invaluable.
+        .cta--text
+          span Try it free 7 days
+          |  then $20/mo. thereafter
+      form(action='#')
+        .input-field
+          input#first-name.first-name(type='text' name='first name' placeholder=" " autocomplete="off")
+          label(for="first-name") first name
+        .input-field
+          input#last-name.last-name(type='text' name='last name' placeholder=" " autocomplete="off")
+          label(for="last-name") last name
+
+        .input-field
+          input#email-address.email-address(type='email' name='email address' placeholder=" " autocomplete="off")
+          label(for="email-address") email address
+
+        .input-field
+          input#password.password(type='password' name='password' placeholder=" ")
+          label(for="password") password
+          i.fa-regular.fa-eye.fa-2x.eye-icon
+          //- i.fa-regular.fa-eye-slash
+
+        button.cta--btn Claim your free trial
+        p.info
+          | By clicking the button, you are agreeing to our
+          span Terms and Services
+    footer
+      p.attribution
+        | Challenge by
+        a(href='https://www.frontendmentor.io/challenges' target='_blank') Frontend Mentor
+        | . Coded by
+        a(href='https://www.frontendmentor.io/profile/PXVC') PXVC
+        | .
+    script(src='https://code.jquery.com/jquery-3.6.0.js' integrity='sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=' crossorigin='anonymous')
+    script(src="app.js")

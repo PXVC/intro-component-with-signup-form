@@ -1,0 +1,140 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	max-width: 86vw;
+}
+
+header {
+	color: $white;
+
+	h1 {
+		font-size: 2.8rem;
+		font-weight: 600;
+		line-height: 3.7rem;
+		margin-bottom: 2.5rem;
+	}
+
+	p {
+		font-size: 1.6rem;
+	}
+}
+
+.content {
+	margin: 0 auto;
+}
+
+.cta {
+	// the blue one
+	&--text {
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin-top: 6.4rem;
+		background-color: $blue;
+		padding: 1.9rem 5rem;
+		border-radius: 1rem;
+		box-shadow: 0 0.7rem #0002;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	// the green one
+	&--btn {
+		width: 90%;
+		height: 5rem;
+		font-size: 1.7rem;
+		text-transform: uppercase;
+		background-color: $green;
+		color: $white;
+		// padding: 1.9rem 5rem;
+		border: none;
+		border-radius: 0.3rem;
+		box-shadow: 0 0.3rem hsl(154, 58%, 42%);
+
+		&:hover {
+			opacity: 0.8;
+			cursor: pointer;
+		}
+	}
+}
+
+form {
+	width: 86vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 2rem;
+	background-color: $white;
+	padding: 3rem 0 2rem;
+	margin-top: 2rem;
+}
+
+.input-field {
+	position: relative;
+	display: flex;
+	width: 90%;
+}
+
+input {
+	width: 100%;
+	height: 5rem;
+	border: 1px solid hsl(0, 0%, 85%);
+	outline: none;
+	border-radius: 0.5rem;
+	padding-left: 1.5rem;
+	font-size: 1.5rem;
+	box-shadow: 0 0.1rem hsl(0, 0%, 85%);
+	overflow: visible;
+	transition: 0.2s;
+
+	&:hover,
+	&:focus {
+		border-color: $blue;
+		box-shadow: 0 0.1rem $blue;
+	}
+
+	&:focus + label,
+	&:not(:placeholder-shown) + label {
+		top: 0;
+		left: 0.5rem;
+		font-size: 1.2rem;
+		color: $blue;
+		background-color: $white;
+		padding: 0 0.5rem;
+	}
+
+	&:not(:focus):not(:placeholder-shown) + label {
+		color: $dark-blue;
+	}
+
+  &:focus + label + i {
+    opacity: 1;
+  }
+}
+
+label {
+	color: $dark-blue;
+	font-weight: 500;
+	text-transform: capitalize;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 50%;
+	left: 1.5rem;
+	transform: translateY(-50%);
+	transition: 0.2s ease;
+}
+
+i {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}

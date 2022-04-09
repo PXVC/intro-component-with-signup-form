@@ -15,7 +15,7 @@ $white: hsl(0, 0%, 100%);
 $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 
-
-@import 'general';
-@import 'main';
-@import '_media1440';
+@import "general";
+@import "main";
+@import "media1440";
+@import "errors";

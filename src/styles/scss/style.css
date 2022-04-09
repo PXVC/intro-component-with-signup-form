@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: url("../../../images/bg-intro-mobile.png") #ff7a7a no-repeat center/100% fixed;
+  background: url("../../../images/bg-intro-mobile.png") hsl(0deg, 100%, 74%) no-repeat center/100% fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ footer {
 }
 
 header {
-  color: white;
+  color: hsl(0deg, 0%, 100%);
 }
 header h1 {
   font-size: 2.8rem;
@@ -57,10 +57,10 @@ header p {
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 6.4rem;
-  background-color: #6055a5;
+  background-color: hsl(248deg, 32%, 49%);
   padding: 1.9rem 5rem;
   border-radius: 1rem;
-  box-shadow: 0 0.7rem #0002;
+  box-shadow: 0 0.7rem rgba(0, 0, 0, 0.1333333333);
 }
 .cta--text span {
   font-weight: 700;
@@ -70,11 +70,11 @@ header p {
   height: 5rem;
   font-size: 1.7rem;
   text-transform: uppercase;
-  background-color: #38cc8c;
-  color: white;
+  background-color: hsl(154deg, 59%, 51%);
+  color: hsl(0deg, 0%, 100%);
   border: none;
   border-radius: 0.3rem;
-  box-shadow: 0 0.3rem #2da973;
+  box-shadow: 0 0.3rem hsl(154deg, 58%, 42%);
 }
 .cta--btn:hover {
   opacity: 0.8;
@@ -90,7 +90,7 @@ form {
   align-items: center;
   justify-content: center;
   row-gap: 2.4rem;
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   padding: 3rem 0 2rem;
   margin-top: 2rem;
 }
@@ -104,40 +104,64 @@ form {
 input {
   width: 100%;
   height: 5rem;
-  border: 1px solid #d9d9d9;
+  border: 1px solid hsl(0deg, 0%, 85%);
   outline: none;
   border-radius: 0.5rem;
   padding-left: 1.5rem;
   font-size: 1.5rem;
-  box-shadow: 0 0.1rem #d9d9d9;
+  box-shadow: 0 0.1rem hsl(0deg, 0%, 85%);
   overflow: visible;
 }
 input:hover, input:focus {
-  border-color: #6055a5;
-  box-shadow: 0 0.1rem #6055a5;
+  border-color: hsl(248deg, 32%, 49%);
+  box-shadow: 0 0.1rem hsl(248deg, 32%, 49%);
+}
+input:not(:-moz-placeholder-shown) + label {
+  top: 0;
+  left: 0.5rem;
+  font-size: 1.2rem;
+  color: hsl(248deg, 32%, 49%);
+}
+input:not(:-ms-input-placeholder) + label {
+  top: 0;
+  left: 0.5rem;
+  font-size: 1.2rem;
+  color: hsl(248deg, 32%, 49%);
 }
 input:focus + label, input:not(:placeholder-shown) + label {
   top: 0;
   left: 0.5rem;
   font-size: 1.2rem;
-  color: #6055a5;
+  color: hsl(248deg, 32%, 49%);
+}
+input:not(:focus):not(:-moz-placeholder-shown) + label {
+  color: hsl(249deg, 10%, 26%);
+}
+input:not(:focus):not(:-ms-input-placeholder) + label {
+  color: hsl(249deg, 10%, 26%);
 }
 input:not(:focus):not(:placeholder-shown) + label {
-  color: #3e3c49;
+  color: hsl(249deg, 10%, 26%);
+}
+input:not(:-moz-placeholder-shown) ~ i {
+  opacity: 1;
+}
+input:not(:-ms-input-placeholder) ~ i {
+  opacity: 1;
 }
 input:focus ~ i, input:not(:placeholder-shown) ~ i {
   opacity: 1;
 }
 
 label {
-  color: #3e3c49;
+  color: hsl(249deg, 10%, 26%);
   font-weight: 500;
   text-transform: capitalize;
   font-size: 1.5rem;
   position: absolute;
   top: 50%;
   left: 1.5rem;
-  background-color: white;
+  background-color: hsl(0deg, 0%, 100%);
   padding: 0 0.5rem;
   transform: translateY(-50%);
   transition: 0.2s ease;
@@ -148,26 +172,24 @@ i {
   top: 50%;
   right: 1.5rem;
   transform: translateY(-50%);
-  opacity: 0;
+  opacity: 0.4;
   cursor: pointer;
 }
 
 p.error-msg {
   position: absolute;
-  color: #ff7a7a;
+  color: hsl(0deg, 100%, 74%);
   bottom: -30%;
   left: 4%;
   transform: translate(-4%, 30%);
 }
 
 .error {
-  border: 1px solid #ff7a7a;
-  box-shadow: 0 0.1rem #ff7a7a;
+  border: 1px solid hsl(0deg, 100%, 74%);
+  box-shadow: 0 0.1rem hsl(0deg, 100%, 74%);
 }
 
 .empty label::after {
   content: attr(data-error);
   background-color: red;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

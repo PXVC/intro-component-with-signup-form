@@ -1,0 +1,13 @@
+.error {
+	border: 1px solid $red;
+	box-shadow: 0 0.1rem $red;
+}
+
+.empty {
+	label {
+		&::after {
+			content: attr(data-error);
+			background-color: red;
+		}
+	}
+}
